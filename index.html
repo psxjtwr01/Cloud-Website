@@ -3,69 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minimalistic Website</title>
+    <title>Cloud - Minecraft Client</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
-            color: #333;
+            background-color: #222;
+            color: #fff;
+            transition: background-color 0.5s ease;
         }
         header {
             background-color: #333;
             color: #fff;
             padding: 20px;
             text-align: center;
+            position: relative;
+            transition: background-color 0.5s ease;
+        }
+        .cloud-logo {
+            width: 80px;
+            height: 60px;
+            background-color: #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            clip-path: polygon(50% 0%, 100% 40%, 100% 100%, 0% 100%, 0% 40%);
+            transform: rotate(-30deg);
+            border: 3px solid #fff; /* Add white border */
+        }
+        .cloud-logo::before,
+        .cloud-logo::after {
+            content: '';
+            position: absolute;
+            background-color: inherit;
+            width: inherit;
+            height: inherit;
+            border-radius: 50%;
+        }
+        .cloud-logo::before {
+            top: 25%;
+            left: 10%;
+        }
+        .cloud-logo::after {
+            bottom: 25%;
+            right: 10%;
+        }
+        header h1 {
+            margin-top: 10px;
         }
         nav {
-            background-color: #666;
+            background-color: #444;
             color: #fff;
             text-align: center;
             padding: 10px 0;
+            transition: background-color 0.5s ease;
         }
         nav a {
             color: #fff;
             text-decoration: none;
             padding: 10px 20px;
             display: inline-block;
+            transition: background-color 0.3s ease;
         }
         nav a:hover {
-            background-color: #444;
+            background-color: #666;
         }
         section {
             padding: 20px;
             margin: 20px;
-            background-color: #fff;
+            background-color: #333;
             border-radius: 5px;
+            transition: background-color 0.5s ease;
         }
         footer {
-            background-color: #333;
+            background-color: #444;
             color: #fff;
             text-align: center;
             padding: 10px 0;
             position: fixed;
             bottom: 0;
             width: 100%;
+            transition: background-color 0.5s ease;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Minimalistic Website</h1>
+        <div class="cloud-logo"></div>
+        <h1>Cloud - Minecraft Client</h1>
     </header>
     <nav>
         <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
+        <a href="features.html">Features</a>
+        <a href="download.html">Download</a>
+        <a href="support.html">Support</a>
     </nav>
     <section>
-        <h2>Welcome to our minimalist website!</h2>
-        <p>This website is designed with simplicity in mind. We believe in minimalism and clean design.</p>
-        <p>Feel free to explore!</p>
+        <h2>Welcome to Cloud, the ultimate Minecraft client!</h2>
+        <p>Cloud offers a seamless Minecraft experience with advanced features and optimizations.</p>
+        <p>Enhance your gameplay with Cloud today!</p>
     </section>
     <footer>
-        &copy; 2024 Minimalistic Website. All rights reserved.
+        &copy; 2024 Cloud Minecraft Client. All rights reserved.
     </footer>
 </body>
 </html>
